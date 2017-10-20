@@ -37,7 +37,7 @@
  '(tooltip ((((class color)) (:inherit (variable-pitch) :foreground "black" :background "lightyellow")) (t (:inherit (variable-pitch)))))
 ;'(mode-line ((t (:background "navy" :foreground "#eeeeec"))))
 ;'(mode-line-inactive ((t (:foreground "#eeeeec" :background "#878787"))))
- '(mode-line ((t (:background "3a3a3a" :foreground "#eeeeec"))))
+ '(mode-line ((t (:background "#3a3a3a" :foreground "#eeeeec"))))
  '(mode-line-inactive ((t (:background "#3a3a3a" :foreground "dark gray"))))
  '(vertical-border ((t (:background "gray" :foreground "dim gray"))))
  '(mode-line-buffer-id ((t (:weight bold))))
