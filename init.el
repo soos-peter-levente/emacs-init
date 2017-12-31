@@ -31,6 +31,9 @@
 ;; keybindings
 (load "keybindings.el")
 
+;; yasnippet
+(load "yas-snippet-mode-config.el")
+
 ;; common lisp
 (load "common-lisp.el")
 
@@ -46,8 +49,8 @@
 ;; auto-insert
 (load "custom-auto-insert.el")
 
-;; yas-snippet config
-(load "yas-snippet-mode-config.el")
+;; global modes
+(load "global-modes-config.el")
 
 ;; custom-set-variables
 (setq custom-file (concatenate 'string *user-config-repository* "/custom-set-variables.el"))

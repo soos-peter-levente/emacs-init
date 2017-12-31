@@ -19,6 +19,8 @@
 ;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ;; SOFTWARE.
 
-;; my own snippets
-(add-to-list 'yas/root-directory (concat *user-config-repository* "/snippets/"))
+(require 'yasnippet)
+
+;; my snippets
+(add-to-list 'yas-snippet-dirs (concat *user-config-repository* "/snippets/"))
 

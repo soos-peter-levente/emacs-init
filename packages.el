@@ -9,6 +9,8 @@
 
 ;;;; Initialize package system
 (package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 (require 'package)
 
@@ -27,6 +29,8 @@
         latex-preview-pane
         magit
         neotree
+	paredit
+	pdf-tools
         slime
         slime-company
         visual-fill-column

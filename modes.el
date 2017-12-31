@@ -3,6 +3,8 @@
 ;; Licensed under the MIT license.
 
 ;; Start helm mode globally
-;(helm-mode)
+;;(helm-mode)
 
-
+;; Enable pdf
+(if (fboundp #'pdf-tools-install)
+  (pdf-tools-install))

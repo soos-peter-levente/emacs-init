@@ -1,4 +1,3 @@
-
 ;; -*- mode: emacs-lisp; coding: utf-8 ; truncate-lines: nil -*-
 ;; Copyright 2017, Soós Péter Levente
 ;; Licensed under the MIT license.
@@ -31,7 +30,7 @@
   (list 'auto-insert-mode
         'company-mode
        ;'highlight-parentheses-mode
-        'idle-highlight-mode
+       ;'idle-highlight-mode
         'paredit-mode
         'show-paren-mode
         'toggle-truncate-lines
@@ -40,9 +39,9 @@
 (defvar cl-modes
   (append repl-modes
           (list 'highlight-quoted-mode
-                'idle-highlight-mode
+               ;'idle-highlight-mode
                 'linum-mode
-                'truncate-lines)))
+                'toggle-truncate-lines)))
 
 ;; hook them up
 (add-mode-hooks 'lisp-mode-hook cl-modes)
@@ -61,7 +60,3 @@
 (defun connect-slime (host port)
   (let ((connection (slime-net-connect host port)))
     (slime-setup-connection connection)))
-
-(defun truncate-lines ()
-  "Disable line truncation. Just wrapping the SETF in a function"
-  (setf truncate-lines t))

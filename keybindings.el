@@ -3,6 +3,7 @@
 ;; Licensed under the MIT license.
 
 (global-set-key (kbd "C-x o") 'win-switch-dispatch)
+(global-set-key (kbd "C-x C-o") 'win-switch-previous-window)
 (global-set-key (kbd "C-c l") 'toggle-truncate-lines)
 (global-set-key (kbd "C-đ") 'isearch-forward-at-point)
 

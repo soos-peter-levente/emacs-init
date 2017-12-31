@@ -19,11 +19,16 @@
  '(column-number-mode t)
  '(company-idle-delay 0)
  '(company-minimum-prefix-length 1)
+ '(company-selection-wrap-around t)
+ '(company-tooltip-limit 20)
  '(custom-safe-themes
    (quote
-    ("4bb3d21000a2468de5f8edcc9c48de9c587d815198fe6e2282a77111a097c564" "071d4cb01bb4e6660481306fcf8ed66acd1585f9c91ce02588ccbaf3bdada5ef" "37b12c64f37656341d90c343c367b38ba5c3aae06abffdb70e945626e9fa25b5" "9bdffa8680ad4ae9034fd3bd42ea92ad8d1a08dfbb54b4452a7efa8e5da2de73" "a7dae5daad21b49f18e0d1d615ee7e35ccc5de3cc3ddd45f4ab542310a68783f" "56e27ed77316803e7cb8e85b274cbdbe9b6fd0e0383ede9734d09f36ea585c8c" "4bba0865a48887f8fc3a963ca20cd6d84419a35f7aae04353c8dc051f5eaadeb" "999ebaa2cc7aeac7d5666671c5028984ab9da1335b8a9615528db65ec624055d" default)))
+    ("d38d15985c7e1e6928289e1b6fbfa09458ba990d6294553fbc18b925b6a1f41b" "9edc9a00a7f947a81d11c367cc5296614917eb290ceca62ac19735939a477d97" default)))
  '(delete-old-versions t)
  '(delete-selection-mode t)
+ '(desktop-save t)
+ '(desktop-save-mode t)
+ '(global-hl-line-mode t)
  '(global-visual-line-mode t)
  '(glyphless-char-display-control
    (quote
@@ -33,14 +38,14 @@
  '(hl-paren-background-colors (quote ignore))
  '(hl-paren-colors (quote ("white smoke")))
  '(idle-highlight-exceptions (quote ("end")))
- '(idle-highlight-idle-time 0.0)
+ '(idle-highlight-idle-time 0.1)
  '(ido-mode t nil (ido))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message "")
  '(kept-new-versions 6)
  '(kept-old-versions 2)
- '(linum-format "%4d │")
+ '(linum-format (quote dynamic))
  '(menu-bar-mode nil)
  '(neo-cwd-line-style (quote text))
  '(neo-force-change-root t)
@@ -82,11 +87,14 @@
  '(overwrite-selection-mode t)
  '(package-selected-packages
    (quote
-    (writeroom-mode idle-highlight-mode aozora-view win-switch helm-ag parinfer neotree visual-fill-column highlight-quoted latex-preview-pane header2 elfeed markdown-mode slime magit w3m slime-company quack paredit js2-mode highlight-parentheses geiser dumb-jump dart-mode common-lisp-snippets auto-yasnippet ac-slime)))
+    (pdf-tools js-doc web-beautify writeroom-mode idle-highlight-mode aozora-view win-switch helm-ag parinfer neotree visual-fill-column highlight-quoted latex-preview-pane header2 elfeed markdown-mode slime magit w3m slime-company quack paredit js2-mode highlight-parentheses geiser dumb-jump dart-mode common-lisp-snippets auto-yasnippet ac-slime)))
  '(pdf-latex-command "xelatex")
  '(safe-local-variable-values
    (quote
-    ((copyright . MIT)
+    ((Base . 10)
+     (Package . CL-PPCRE)
+     (Syntax . COMMON-LISP)
+     (copyright . MIT)
      (author . soos-peter-levente)
      (author . spl)
      (license . MIT))))
@@ -99,11 +107,12 @@
  '(show-paren-style (quote parenthesis))
  '(show-paren-when-point-in-periphery t)
  '(show-paren-when-point-inside-paren nil)
+ '(show-trailing-whitespace t)
  '(slime-kill-without-query-p t)
  '(split-height-threshold nil)
  '(split-width-threshold 120)
  '(tool-bar-mode nil)
- '(tramp-syntax (quote default) nil (tramp))
+ '(tramp-syntax (quote default))
  '(truncate-lines t)
  '(version-control t)
  '(w3m-confirm-leaving-secure-page nil)
@@ -116,8 +125,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(helm-source-header ((t (:background "#22083397778B" :foreground "white" :weight bold :height 1.0))))
+ '(hl-line ((t (:background "gray18"))))
  '(hl-paren-face ((t (:background "dim gray" :foreground "white smoke"))) t)
  '(idle-highlight ((t (:foreground "dark gray"))))
  '(show-paren-match ((t (:background "dim gray" :foreground "white smoke"))))
  '(show-paren-match-expression ((t (:background "dim gray" :foreground "white smoke"))))
- '(show-paren-mismatch ((t (:background "purple" :foreground "white")))))
+ '(show-paren-mismatch ((t (:background "purple" :foreground "white"))))
+ '(trailing-whitespace ((t (:background "gray18")))))
