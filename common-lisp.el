@@ -17,7 +17,8 @@
 
 ;;;; contribs
 (slime-setup
- '(slime-fancy
+ '(slime-asdf
+   slime-fancy
    slime-fancy-inspector
    slime-cl-indent
    slime-mdot-fu
@@ -29,8 +30,6 @@
 (defvar repl-modes
   (list 'auto-insert-mode
         'company-mode
-       ;'highlight-parentheses-mode
-       ;'idle-highlight-mode
         'paredit-mode
         'show-paren-mode
         'toggle-truncate-lines
@@ -39,9 +38,9 @@
 (defvar cl-modes
   (append repl-modes
           (list 'highlight-quoted-mode
-               ;'idle-highlight-mode
-                'linum-mode
-                'toggle-truncate-lines)))
+                'highlight-symbol-mode
+                'highlight-symbol-nav-mode
+                )))
 
 ;; hook them up
 (add-mode-hooks 'lisp-mode-hook cl-modes)
@@ -50,13 +49,11 @@
 ;; Lisp lines are no use with word wrap
 (add-hook 'lisp-mode-hook '(lambda () (visual-line-mode nil)))
 
-;;;; Some helper functions in case we want to open the REPL automatically
-(defun lisp-repl ()
+;;;; Some helper functions
+(defun slime-repl-paredit-static-splice ()
+  "Wrap `paredit-splice-sexp' in a `save-excursion' call.A small
+helper to prevent the cursor from jumping to the end of the line
+in the REPL."
   (interactive)
-  (if (not (slime-connected-p))
-    (connect-slime "127.0.0.1" (string-to-number (getenv "SWANK_PORT")))
-    (slime-repl)))
-
-(defun connect-slime (host port)
-  (let ((connection (slime-net-connect host port)))
-    (slime-setup-connection connection)))
+  (save-excursion
+    (paredit-splice-sexp)))

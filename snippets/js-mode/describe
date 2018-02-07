@@ -1,0 +1,8 @@
+$ cat describe
+# -*- mode: snippet -*-
+# name : describe
+# key: dsc
+# --
+describe("${1:description}", () => {
+    $0
+});

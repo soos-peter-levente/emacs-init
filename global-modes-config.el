@@ -20,10 +20,10 @@
 
 ;;; Code:
 
-(desktop-save-mode)
+;(desktop-save-mode)
 (winner-mode)
+(global-yascroll-bar-mode)
 ;; (global-company-mode)
 ;; (yas-global-mode)
 
-(provide 'global-modes-config)
 ;;; global-modes-config.el ends here

@@ -8,13 +8,13 @@
 ;;;; some useful minor modes
 (defvar elisp-modes
   (list 'yas-minor-mode
-;       'highlight-parentheses-mode
         'highlight-quoted-mode
+        'highlight-symbol-mode
+        ;'highlight-symbol-nav-mode
         'show-paren-mode
         'paredit-mode
         'company-mode
         'auto-insert-mode
-        'linum-mode
         'toggle-truncate-lines))
 
 ;;;; add a few hooks

@@ -25,7 +25,7 @@
         helm-ag
         highlight-parentheses
         highlight-quoted
-        idle-highlight-mode
+        highlight-symbol
         latex-preview-pane
         magit
         neotree
@@ -37,6 +37,7 @@
         w3m
         web-mode
         win-switch
+        yascroll
         yasnippet))
 
 ;;;; Install any missing packages

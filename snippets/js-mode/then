@@ -1,0 +1,6 @@
+$ cat then
+# -*- mode: snippet -*-
+# name : then
+# key: tn
+# --
+.then(($1) => $0)

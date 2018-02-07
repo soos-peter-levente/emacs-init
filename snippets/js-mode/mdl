@@ -1,0 +1,13 @@
+$ cat mdl
+# -*- mode: snippet -*-
+# name : module
+# key: mdl
+# --
+var ${1:module} = (function () {
+    function $1 () {
+        this.${2:property} = ${3:value};
+    }
+    $0
+    return $1;
+})();
+module.exports = $1
